@@ -84,7 +84,7 @@ deploy_dev:
   script:
     - mkdir -p ~/.kube
     - echo "$KUBECONFIG_CONTENT" > ~/.kube/config
-    - kubectl config use-context minikube
+    - kubectl config use-context $(kubectl config current-context)
     - kubectl apply -f k8s/namespace.yaml
     - kubectl apply -f k8s/mongo-pv.yaml
     - kubectl apply -f k8s/mongo-pvc.yaml
