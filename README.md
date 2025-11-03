@@ -1,4 +1,4 @@
-# 🗂️ DevTask — Fullstack Kanban with DevOps Automation
+# DevTask — Fullstack Kanban with DevOps Automation
 
 ## Project Description
 DevTask is a **fullstack Kanban task management application** designed to demonstrate **end‑to‑end DevOps practices**.  
@@ -22,7 +22,7 @@ It showcases how modern applications can be built, containerized, tested, and de
 
 ## Run & Deploy
 
-### 🧪 Local Development
+### Local Development
 **Frontend**
 ```bash
 cd frontend
