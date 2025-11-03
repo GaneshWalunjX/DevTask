@@ -1,5 +1,3 @@
-
-```markdown
 # DevTask — Fullstack Kanban with DevOps Automation
 
 ## Project Description
@@ -7,6 +5,7 @@ DevTask is a fullstack Kanban task management application designed to demonstrat
 It showcases how modern applications can be **built, containerized, tested, and deployed** using CI/CD pipelines, Kubernetes, Ansible, and Infrastructure as Code.  
 
 ---
+
 
 ## Project Info / Features
 
@@ -65,6 +64,7 @@ docker run -p 8080:8080 -e MONGO_URL=mongodb://host.docker.internal:27017/devtas
 1. Create namespace:
 ```bash
 kubectl apply -f k8s/namespace.yaml
+
 ```
 
 2. Create registry secret:
@@ -96,4 +96,3 @@ kubectl apply -f k8s/ -n devtask
 - **IaC (planned)**: Terraform  
 
 ---
-```
