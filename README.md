@@ -35,7 +35,7 @@ npm run dev
 **Backend (Java Spring Boot)**
 ```bash
 cd backend
-./mvnw spring-boot:run
+./mvn spring-boot:run
 ```
 
 **MongoDB (local via Docker)**
