@@ -24,7 +24,11 @@ It showcases how modern applications can be **built, containerized, tested, and 
 
 ## Run & Deploy
 
-### Local Development
+**Clone the repository**
+git clone <https://github.com/GaneshWalunjX/DevTask.git>
+cd stackbridge
+
+
 **Frontend**
 ```bash
 cd frontend
