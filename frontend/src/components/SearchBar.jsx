@@ -7,7 +7,6 @@ const SearchBar = ({ filters, setFilters }) => {
 
   return (
     <div className="relative w-full">
-      {/* Magnifying Glass Icon */}
       <svg
         className="h-5 w-5 text-gray-800 dark:text-gray-200 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +20,6 @@ const SearchBar = ({ filters, setFilters }) => {
         />
       </svg>
 
-      {/* Input Field */}
       <input
         type="text"
         name="query"
