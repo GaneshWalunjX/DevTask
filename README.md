@@ -68,7 +68,6 @@ docker run -p 8080:8080 -e MONGO_URL=mongodb://host.docker.internal:27017/devtas
 1. Create namespace:
 ```bash
 kubectl apply -f k8s/namespace.yaml
-
 ```
 
 2. Create registry secret:
@@ -85,7 +84,20 @@ kubectl create secret docker-registry gitlab-registry-secret \
 ```bash
 kubectl apply -f k8s/ -n devtask
 ```
+### Ansible Automation
+Run playbooks:
+```bash
+ansible-playbook -i inventory/hosts setup-cluster.yml
+ansible-playbook -i inventory/hosts deploy-app.yml
+```
 
+### Terraform
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
 ---
 
 ## Tools & Technologies
