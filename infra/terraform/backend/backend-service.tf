@@ -1,6 +1,6 @@
 resource "kubernetes_service" "backend" {
   metadata {
-    name      = "backend"
+    name          = "backend"
     namespace = var.namespace
     labels = {
       app = "backend"
@@ -13,7 +13,7 @@ resource "kubernetes_service" "backend" {
     }
 
     port {
-      port        = 5000
+      port            = 5000
       target_port = 8083
     }
   }
