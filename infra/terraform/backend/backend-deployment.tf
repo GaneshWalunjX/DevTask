@@ -1,9 +1,9 @@
 resource "kubernetes_deployment" "backend" {
   metadata {
-    name      = "backend"
+    name          = "backend"
     namespace = var.namespace
     labels = {
-      app = "backend"
+      app  = "backend"
     }
   }
 
@@ -19,7 +19,7 @@ resource "kubernetes_deployment" "backend" {
     template {
       metadata {
         labels = {
-          app = "backend"
+          app  = "backend"
         }
       }
 
@@ -43,16 +43,16 @@ resource "kubernetes_deployment" "backend" {
 
           env {
             name  = "MONGO_URL"
-            value = "mongodb://mongo:27017/devtask"
+            value   = "mongodb://mongo:27017/devtask"
           }
 
           resources {
             limits = {
-              cpu    = "500m"
+              cpu        = "500m"
               memory = "512Mi"
             }
             requests = {
-              cpu    = "250m"
+              cpu        = "250m"
               memory = "256Mi"
             }
           }
