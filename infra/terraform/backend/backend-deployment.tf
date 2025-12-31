@@ -51,7 +51,7 @@ resource "kubernetes_deployment" "backend" {
               cpu        = "500m"
               memory = "512Mi"
             }
-            requests = {
+            requests   = {
               cpu        = "250m"
               memory = "256Mi"
             }
