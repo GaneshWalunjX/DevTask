@@ -38,7 +38,7 @@ resource "kubernetes_deployment" "backend" {
               port = 8083
             }
             initial_delay_seconds = 10
-            period_seconds        = 10
+            period_seconds         = 10
           }
 
           env {
