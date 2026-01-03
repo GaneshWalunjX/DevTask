@@ -3,7 +3,7 @@ resource "kubernetes_service" "backend" {
     name          = "backend"
     namespace = var.namespace
     labels = {
-      app = "backend"
+      app  = "backend"
     }
   }
 
