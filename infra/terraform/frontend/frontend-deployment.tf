@@ -1,9 +1,9 @@
 resource "kubernetes_deployment" "frontend" {
   metadata {
-    name      = "frontend"
+    name          = "frontend"
     namespace = var.namespace
     labels = {
-      app = "frontend"
+      app  = "frontend"
     }
   }
 
@@ -19,7 +19,7 @@ resource "kubernetes_deployment" "frontend" {
     template {
       metadata {
         labels = {
-          app = "frontend"
+          app  = "frontend"
         }
       }
 
