@@ -3,7 +3,7 @@ resource "kubernetes_service" "frontend" {
     name      = "frontend"
     namespace = var.namespace
     labels = {
-      app = "frontend"
+      app  = "frontend"
     }
   }
 
@@ -13,7 +13,7 @@ resource "kubernetes_service" "frontend" {
     }
 
     port {
-      port        = 4173
+      port            = 4173
       target_port = 4173
     }
 
