@@ -1,9 +1,9 @@
 resource "kubernetes_ingress_v1" "frontend_ingress" {
   metadata {
-    name      = "frontend-ingress"
+    name          = "frontend-ingress"
     namespace = var.namespace
     labels = {
-      app = "frontend"
+      app  = "frontend"
     }
     # 🚫 No annotations needed
   }
@@ -16,7 +16,7 @@ resource "kubernetes_ingress_v1" "frontend_ingress" {
 
       http {
         path {
-          path      = "/"
+          path         = "/"
           path_type = "Prefix"
 
           backend {
