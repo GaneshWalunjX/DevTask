@@ -1,9 +1,9 @@
 resource "kubernetes_deployment" "nginx_ingress_controller" {
   metadata {
-    name      = "nginx-ingress-controller"
+    name          = "nginx-ingress-controller"
     namespace = var.namespace
     labels = {
-      app = "nginx-ingress"
+      app  = "nginx-ingress"
     }
   }
 
@@ -19,7 +19,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
     template {
       metadata {
         labels = {
-          app = "nginx-ingress"
+          app  = "nginx-ingress"
         }
       }
 
@@ -68,7 +68,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
               port = 10254
             }
             initial_delay_seconds = 10
-            period_seconds        = 10
+            period_seconds         = 10
           }
 
           liveness_probe {
@@ -77,7 +77,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
               port = 10254
             }
             initial_delay_seconds = 10
-            period_seconds        = 10
+            period_seconds         = 10
           }
         }
       }
@@ -87,10 +87,10 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
 
 resource "kubernetes_service" "nginx_ingress_controller_service" {
   metadata {
-    name      = "nginx-ingress-controller"
+    name          = "nginx-ingress-controller"
     namespace = var.namespace
     labels = {
-      app = "nginx-ingress"
+      app  = "nginx-ingress"
     }
   }
 
@@ -102,17 +102,17 @@ resource "kubernetes_service" "nginx_ingress_controller_service" {
     }
 
     port {
-      name        = "http"
-      port        = 80
+      name          = "http"
+      port            = 80
       target_port = 80
       node_port   = 30080
     }
 
     port {
-      name        = "https"
-      port        = 443
-      target_port = 443
-      node_port   = 30443
+      name           = "https"
+      port             = 443
+      target_port  = 443
+      node_port    = 30443
     }
   }
 }
