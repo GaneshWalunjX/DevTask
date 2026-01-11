@@ -112,7 +112,7 @@ resource "kubernetes_service" "nginx_ingress_controller_service" {
       name           = "https"
       port             = 443
       target_port  = 443
-      node_port    = 30443
+      node_port   = 30443
     }
   }
 }
