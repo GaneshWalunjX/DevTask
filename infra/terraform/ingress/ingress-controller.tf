@@ -98,7 +98,7 @@ resource "kubernetes_service" "nginx_ingress_controller_service" {
     type = "NodePort"
 
     selector = {
-      app   = "nginx-ingress"
+      app    = "nginx-ingress"
     }
 
     port {
